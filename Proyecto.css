@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 body {
     background: #f3f3f3;
 }
 
-/* Header */
+/* HEADER */
 header {
     background: #fff;
     padding: 15px 30px;
@@ -17,6 +17,12 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .menu a {
@@ -31,9 +37,39 @@ header {
     border: none;
     padding: 7px 15px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
-/* Buscador */
+/* MENÚ HAMBURGUESA */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 28px;
+    background: #222;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* BUSCADOR */
 .buscador {
     padding: 25px;
     display: flex;
@@ -42,12 +78,13 @@ header {
 
 .buscador input {
     width: 70%;
-    padding: 12px;
+    padding: 12px 20px;
     border-radius: 20px;
     border: 1px solid #ccc;
+    font-size: 15px;
 }
 
-/* Categorías */
+/* CATEGORÍAS */
 .categorias {
     display: flex;
     justify-content: center;
@@ -57,10 +94,11 @@ header {
 }
 
 .categorias button {
-    padding: 7px 15px;
+    padding: 8px 18px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .categorias .activo {
@@ -68,59 +106,119 @@ header {
     color: white;
 }
 
-/* Títulos */
+/* TÍTULOS */
 .titulo-seccion {
-    padding: 10px 30px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
 }
 
-/* Libros destacados (fila de 3) */
+/* DESTACADOS - HORIZONTAL */
 .fila-libros {
     display: flex;
-    gap: 35px;
-    padding: 15px 35px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
 }
 
-/* Libros populares - CAMBIO IMPORTANTE */
-.grid-libros {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 30px;
-    padding: 15px 35px;
-}
-
-/* Tarjetas */
-.libro {
+.libro-destacado {
+    display: flex;
+    gap: 20px;
     background: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    align-items: center;
+}
+
+.libro-destacado:hover {
+    transform: scale(1.03);
+}
+
+.libro-destacado img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 8px;
-    padding: 30px;
-   
 }
 
-.libro img {
-    width: 150;
-    border-radius: 5px;
-    height: 150;
+.libro-destacado .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.libro h4 {
-    font-size: 15px;
-    margin-top: 6px;
+.libro-destacado h4 {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.libro p {
-    font-size: 13px;
+.libro-destacado p {
+    font-size: 14px;
     color: #666;
 }
 
-/* Footer */
+/* GRID DE LIBROS POPULARES */
+.grid-libros {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    padding: 20px 40px;
+    justify-items: center;
+}
+
+.libro {
+    background: white;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.libro:hover {
+    transform: scale(1.07);
+}
+
+.libro img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.libro h4 {
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.libro p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* FOOTER */
 footer {
     background: #111;
     color: white;
+    padding: 40px 20px;
     display: flex;
-    justify-content: space-between;
-    padding: 30px;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+footer div {
+    max-width: 200px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
 }
 
 footer a {
@@ -128,4 +226,153 @@ footer a {
     text-decoration: none;
     display: block;
     margin: 5px 0;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content-detalle {
+    background: white;
+    width: 85%;
+    max-width: 1000px;
+    max-height: 90vh;
+    padding: 25px;
+    border-radius: 12px;
+    overflow-y: auto;
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.modal-left img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.modal-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #222;
+}
+
+.badge-cat {
+    background: #eee;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.modal-grid .item strong {
+    display: block;
+    font-size: 13px;
+    color: #555;
+}
+
+.modal-grid .item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.generos span {
+    margin-right: 8px;
+    padding: 3px 10px;
+    background: #eee;
+    border-radius: 50px;
+    font-size: 13px;
+}
+
+.actions, .actions-large {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.actions-large button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-dark {
+    background: black;
+    color: white;
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid #222;
+    color: #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .grid-libros {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .fila-libros {
+        flex-direction: column;
+    }
+
+    .grid-libros {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile.show {
+        display: flex;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
 }
