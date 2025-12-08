@@ -1,239 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiblioYan</title>
-    <link rel="stylesheet" href="Proyecto.css" />
+    <link rel="stylesheet" href="Proyecto.css">
 </head>
 <body>
-    <!-- Header de la página -->
-    <header>
-        <div class="logo">BiblioYan</div>
 
-        <!-- MENÚ NORMAL -->
-        <nav class="menu">
-            <a href="#">Tu mejor Biblioteca digital</a>
-        </nav>
-
-        <!-- BOTÓN HAMBURGUESA -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- MENÚ EN MÓVIL -->
-        <nav class="menu-mobile" id="menuMobile">
-            <a href="#">Tu mejor Biblioteca digital</a>
-        </nav>
-
-        <div class="acciones">
-            <button class="btn-sus">Suscríbete</button>
-        </div>
-    </header>
-
-    <!-- Buscador -->
-    <div class="buscador">
-        <input type="text" placeholder="Buscar libros, autores, géneros..." />
+<!-- Header de la página -->
+<header>
+    <div class="logo">BiblioYan</div>
+    <nav class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Explorar</a>
+        <a href="#">Mis Libros</a>
+        <a href="#">Comunidad</a>
+    </nav>
+    <div class="acciones">
+        <button class="btn-sus">Suscríbete</button>
     </div>
+</header>
 
-    <!-- Categorías -->
-    <div class="categorias">
-        <button class="activo">Todos</button>
-        <button>Ficción</button>
-        <button>Romance</button>
-        <button>Clásicos</button>
+<!-- Buscador -->
+<div class="buscador">
+    <input type="text" placeholder="Buscar libros, autores, géneros...">
+</div>
+
+<!-- Categorías -->
+<div class="categorias">
+    <button class="activo">Todos</button>
+    <button>Ficción</button>
+    <button>Romance</button>
+    <button>Ciencia Ficción</button>
+    <button>Clásicos</button>
+    <button>Fantasía</button>
+    <button>Misterio</button>
+</div>
+
+<!-- Destacados -->
+<div class="titulo-seccion">
+    <h2>Destacados de la semana</h2>
+    <button class="ver-todo">Ver todos</button>
+</div>
+
+<div class="fila-libros" data-id="1">
+    <div class="libro">
+        <img src="IMG/CIEN AÑOS.JPG" alt="">
+        <h4>Cien Años de Soledad</h4>
+        <p>Gabriel García Márquez</p>
     </div>
-
-    <!-- Destacados -->
-    <div class="titulo-seccion">
-        <h2>Destacados de la semana</h2>
+    <div class="libro" data-id="2">
+        <img src="IMG/Principito.jpg" alt="">
+        <h4>El Principito </h4>
+        <p>Gabriel García Márquez</p>
     </div>
-
-    <div class="fila-libros-destacados">
-        <div class="libro-destacado" data-id="1">
-            <img src="IMG/CIEN AÑOS.JPG" alt="Cien Años de Soledad" />
-            <div class="info-libro">
-                <h4>Cien Años de Soledad</h4>
-                <p>Gabriel García Márquez</p>
-            </div>
-        </div>
-
-        <div class="libro-destacado" data-id="2">
-            <img src="IMG/Principito.jpg" alt="El Principito" />
-            <div class="info-libro">
-                <h4>El Principito</h4>
-                <p>Antoine de Saint-Exupéry</p>
-            </div>
-        </div>
-
-        <div class="libro-destacado" data-id="3">
-            <img src="IMG/1894.jpg" alt="1984" />
-            <div class="info-libro">
-                <h4>1984</h4>
-                <p>George Orwell</p>
-            </div>
-        </div>
+    <div class="libro" data-id="3">
+        <img src="IMG/1894.jpg" alt="">
+        <h4>1894 </h4>
+        <p>George Orwell</p>
     </div>
-
-    <!-- Populares -->
-    <div class="titulo-seccion">
-        <h2>Libros Populares</h2>
+    <div class="libro" data-id="8">
+        <img src="IMG/codigo vinci.jpg">
+        <h4>El Código Da Vinci</h4>
+        <p>Dan Brown</p>
     </div>
-
-    <div class="grid-libros">
-        <div class="libro" data-id="4">
-            <img src="IMG/don quijote.jpg" alt="Don Quijote de la Mancha" />
-            <h4>Don Quijote de la Mancha</h4>
-            <p>Miguel de Cervantes</p>
-        </div>
-
-        <div class="libro" data-id="3">
-            <img src="IMG/1894.jpg" alt="1984" />
-            <h4>1984</h4>
-            <p>George Orwell</p>
-        </div>
-
-        <div class="libro" data-id="2">
-            <img src="IMG/Principito.jpg" alt="El Principito" />
-            <h4>El Principito</h4>
-            <p>Antoine de Saint-Exupéry</p>
-        </div>
-
-        <div class="libro" data-id="1">
-            <img src="IMG/CIEN AÑOS.JPG" alt="Cien Años de Soledad" />
-            <h4>Cien Años de Soledad</h4>
-            <p>Gabriel García Márquez</p>
-        </div>
-
-        <div class="libro" data-id="5">
-            <img src="IMG/harry poter.jpg" alt="Harry Potter y la Piedra Filosofal" />
-            <h4>Harry Potter y la Piedra Filosofal</h4>
-            <p>J.K. Rowling</p>
-        </div>
-
-        <div class="libro" data-id="6">
-            <img src="IMG/orgullo y perjucio.jpg" alt="Orgullo y Prejuicio" />
-            <h4>Orgullo y Prejuicio</h4>
-            <p>Jane Austen</p>
-        </div>
-
-        <div class="libro" data-id="7">
-            <img src="IMG/cronica de la muerte.jpg" alt="Crónica de una Muerte Anunciada" />
-            <h4>Crónica de una Muerte Anunciada</h4>
-            <p>Gabriel García Márquez</p>
-        </div>
-
-        <div class="libro" data-id="8">
-            <img src="IMG/codigo vinci.jpg" alt="El Codigo Da Vinci" />
-            <h4>El Código Da Vinci</h4>
-            <p>Dan Brown</p>
-        </div>
-
-        <div class="libro" data-id="9">
-            <img src="IMG/el juego del hambre.jpg" alt="Los Juegos del Hambre" />
-            <h4>Los Juegos del Hambre</h4>
-            <p>Suzanne Collins</p>
-        </div>
-
-        <div class="libro" data-id="10">
-            <img src="IMG/el señor de los anillos.jpg" alt="El Señor de los Anillos" />
-            <h4>El Señor de los Anillos</h4>
-            <p>J.R.R. Tolkien</p>
-        </div>
-
-        <div class="libro" data-id="11">
-            <img src="IMG/crimen y castigo.jpg" alt="Crimen y Castigo" />
-            <h4>Crimen y Castigo</h4>
-            <p>Fiódor Dostoyevski</p>
-        </div>
-
-        <div class="libro" data-id="12">
-            <img src="IMG/casa de los espiritus.jpg" alt="La Casa de los Espíritus" />
-            <h4>La Casa de los Espíritus</h4>
-            <p>Isabel Allende</p>
-        </div>
+    <div class="libro" data-id="12">
+        <img src="IMG/casa de los espiritus.jpg">
+        <h4>La Casa de los Espíritus</h4>
+        <p>Isabel Allende</p>
     </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div>
-            <h3>BiblioYan</h3>
-            <p>Tu biblioteca digital con los mejores libros.</p>
+<!-- Populares -->
+<div class="titulo-seccion">
+    <h2>Libros Populares</h2>
+</div>
+<div class="grid-libros">
+    <div class="libro" data-id="4">
+        <img src="IMG/don quijote.jpg">
+        <h4>Don Quijote de la Mancha</h4>
+        <p>Miguel de Cervantes</p>
+    </div>
+    <div class="libro" data-id="3">
+        <img src="IMG/1894.jpg">
+        <h4>1984</h4>
+        <p>George Orwell</p>
+    </div>
+    <div class="libro" data-id="2">
+        <img src="IMG/Principito.jpg">
+        <h4>El Principito</h4>
+        <p>Antoine de Saint-Exupéry</p>
+    </div>
+    <div class="libro" data-id="1">
+        <img src="IMG/CIEN AÑOS.JPG">
+        <h4>Cien Años de Soledad</h4>
+        <p>Gabriel García Márquez</p>
+    </div>
+    <div class="libro" data-id="5">
+        <img src="IMG/harry poter.jpg">
+        <h4>Harry Potter y la Piedra Filosofal</h4>
+        <p>J.K. Rowling</p>
+    </div>
+    <div class="libro" data-id="6">
+        <img src="IMG/orgullo y perjucio.jpg">
+        <h4>Orgullo y Perjucio</h4>
+        <p>Jane Austen</p>
+    </div>
+    <div class="libro" data-id="7">
+        <img src="IMG/cronica de la muerte.jpg">
+        <h4>Crónica de una Muerte Anunciada</h4>
+        <p>Gabriel García Márquez</p>
+    </div>
+    <div class="libro" data-id="8">
+        <img src="IMG/codigo vinci.jpg">
+        <h4>El Código Da Vinci</h4>
+        <p>Dan Brown</p>
+    </div>
+    <div class="libro" data-id="9">
+        <img src="IMG/el juego del hambre.jpg">
+        <h4>Los Juegos del Hambre</h4>
+        <p>Suzanne Collins</p>
+    </div>
+    <div class="libro" data-id="10">
+        <img src="IMG/el señor de los anillos.jpg">
+        <h4>El Señor de los Anillos</h4>
+        <p>J.R.R. Tolkien</p>
+    </div>
+    <div class="libro" data-id="11">
+        <img src="IMG/crimen y castigo.jpg">
+        <h4>Crimen y Castigo</h4>
+        <p>Fiódor Dostoyevski</p>
+    </div>
+    <div class="libro" data-id="12">
+        <img src="IMG/casa de los espiritus.jpg">
+        <h4>La Casa de los Espíritus</h4>
+        <p>Isabel Allende</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div>
+        <h3>BiblioYan</h3>
+        <p>Tu biblioteca digital con los mejores libros.</p>
+    </div>
+    <div>
+        <h3>Explorar</h3>
+        <a href="#">Nuevos lanzamientos</a>
+        <a href="#">Populares</a>
+        <a href="#">Clásicos</a>
+    </div>
+    <div>
+        <h3>Categorías</h3>
+        <a href="#">Ficción</a>
+        <a href="#">No ficción</a>
+        <a href="#">Ciencia ficción</a>
+    </div>
+</footer>
+
+<!-- MODAL DETALLADO DE LIBRO -->
+<div id="modalLibro" class="modal">
+    <div class="modal-content-detalle">
+
+        <span id="cerrarModal" class="cerrar">&times;</span>
+
+        <div class="modal-left">
+            <img id="modalImagen" class="modal-img">
         </div>
 
-        <div>
-            <h3>Explorar</h3>
-            <a href="#">Nuevos lanzamientos</a>
-            <a href="#">Populares</a>
-            <a href="#">Clásicos</a>
-        </div>
+        <div class="modal-right">
 
-        <div>
-            <h3>Categorías</h3>
-            <a href="#">Ficción</a>
-            <a href="#">No ficción</a>
-            <a href="#">Ciencia ficción</a>
-        </div>
-    </footer>
+            <span id="modalCategoria" class="badge-cat"></span>
 
-    <!-- MODAL DETALLADO DE LIBRO -->
-    <div id="modalLibro" class="modal">
-        <div class="modal-content-detalle">
-            <span id="cerrarModal" class="cerrar">&times;</span>
+            <h2 id="modalTitulo"></h2>
+            <h3 id="modalAutor"></h3>
 
-            <div class="modal-left">
-                <img id="modalImagen" class="modal-img" alt="Imagen del libro" />
-            </div>
+            <h4>Sinopsis</h4>
+            <p id="modalDescripcion"></p>
 
-            <div class="modal-right">
-                <span id="modalCategoria" class="badge-cat"></span>
+            <div class="modal-grid">
 
-                <h2 id="modalTitulo"></h2>
-                <h3 id="modalAutor"></h3>
-
-                <h4>Sinopsis</h4>
-                <p id="modalDescripcion"></p>
-
-                <div class="modal-grid">
-                    <div class="item">
-                        <strong>Año</strong>
-                        <p id="modalAnio"></p>
-                    </div>
-
-                    <div class="item">
-                        <strong>Páginas</strong>
-                        <p id="modalPaginas"></p>
-                    </div>
-
-                    <div class="item">
-                        <strong>Idioma</strong>
-                        <p id="modalIdioma"></p>
-                    </div>
-
-                    <div class="item">
-                        <strong>Categoría</strong>
-                        <p id="modalCategoria2"></p>
-                    </div>
+                <div class="item">
+                    <strong>Año</strong>
+                    <p id="modalAnio"></p>
                 </div>
 
-                <h4>Géneros</h4>
-                <div id="modalGeneros" class="generos"></div>
-
-                <!--<div class="actions">
-                    <button class="btn-secondary">❤ Guardar</button>
-                    <button class="btn-secondary">↗ Compartir</button>
-                    <button class="btn-secondary">⬇ Descargar</button>
-                </div>-->
-
-                <div class="actions-large">
-                    <button class="btn-dark">Leer ahora</button>
+                <div class="item">
+                    <strong>Páginas</strong>
+                    <p id="modalPaginas"></p>
                 </div>
+
+                <div class="item">
+                    <strong>Idioma</strong>
+                    <p id="modalIdioma"></p>
+                </div>
+
+                <div class="item">
+                    <strong>Categoría</strong>
+                    <p id="modalCategoria2"></p>
+                </div>
+
             </div>
+
+            <h4>Géneros</h4>
+            <div id="modalGeneros" class="generos"></div>
+
+            <div class="actions">
+                <button class="btn-secondary">❤ Guardar</button>
+                <button class="btn-secondary">↗ Compartir</button>
+                <button class="btn-secondary">⬇ Descargar</button>
+            </div>
+
+            <div class="actions-large">
+                <button class="btn-dark">Leer ahora</button>
+                <button class="btn-outline">Agregar a mi biblioteca</button>
+            </div>
+
         </div>
     </div>
+</div>
 
-    <script src="Proyecto.js"></script>
+
+<script src="Proyecto.js"></script>
 </body>
 </html>
