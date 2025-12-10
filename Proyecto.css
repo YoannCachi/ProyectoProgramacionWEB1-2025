@@ -7,22 +7,33 @@
 
 body {
     background: #f3f3f3;
+    font-size: 15px;
 }
 
 /* HEADER */
 header {
-    background: #fff;
-    padding: 15px 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
+    justify-content: center; 
+    align-items: center;     
+    gap: 20px;                
+    padding: 10px 0;
+    background-color: white;
     position: relative;
+    z-index: 10;
 }
 
-.logo {
+header h1 {
+    font-size: 120px;        
     font-weight: bold;
-    font-size: 22px;
+    text-align: center;
+    color: #4A90E2;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+    width: auto;               
+}
+.logo {
+    width: 60px;
+    height: auto;
 }
 
 .menu a {
@@ -117,6 +128,7 @@ header {
 .fila-libros {
     display: flex;
     justify-content: center;
+
     flex-direction: row;   /* ← CAMBIO HECHO AQUÍ */
     gap: 20px;
     padding: 20px 30px;
@@ -302,7 +314,7 @@ footer a {
 .modal-grid .item p {
     font-size: 14px;
     font-weight: bold;
-   	color: #222;
+    color: #222;
 }
 
 .generos span {
@@ -350,12 +362,15 @@ footer a {
 
 @media (max-width: 600px) {
     .fila-libros {
-        flex-direction: column; /* En móviles vuelven a vertical */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
     }
 
     .grid-libros {
         grid-template-columns: 1fr;
         padding: 10px;
+        justify-items: center;
     }
 
     .hamburger {
@@ -378,7 +393,7 @@ footer a {
     }
 }
 
-/* MODAL DETALLADO (duplicado pero igual) */
+/* MODAL DETALLADO  */
 .modal {
     display: none;
     position: fixed;
@@ -477,4 +492,9 @@ footer a {
     border-radius: 10px;
     border: 1px solid #333;
     cursor: pointer;
+}
+#visorLibro iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }

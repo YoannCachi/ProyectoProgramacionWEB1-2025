@@ -7,48 +7,38 @@
     <link rel="stylesheet" href="Proyecto.css">
 </head>
 <body>
-
-<!-- Header de la página -->
 <header>
-    <div class="logo">BiblioYan</div>
-    <nav class="menu">
-        <a href="#">Inicio</a>
-        <a href="#">Explorar</a>
-        <a href="#">Mis Libros</a>
-        <a href="#">Comunidad</a>
-    </nav>
-    <div class="acciones">
-        <button class="btn-sus">Suscríbete</button>
-    </div>
+    <img src="logo/LOGO.BIBLIOYAN.png" alt="Logo BiblioYan" class="logo">
+    <div class="logo" >BiblioYann</div>
+        <nav class="menu">
+        </nav>
 </header>
 
 <!-- Buscador -->
 <div class="buscador">
-    <input type="text" placeholder="Buscar libros, autores, géneros...">
+    <input type="text" placeholder="Busca libros que quieras Leer...">
 </div>
 
-<!-- Categorías -->
 <div class="categorias">
-    <button class="activo">Todos</button>
-    <button>Ficción</button>
-    <button>Romance</button>
-    <button>Ciencia Ficción</button>
-    <button>Clásicos</button>
-    <button>Fantasía</button>
-    <button>Misterio</button>
+    <button class="cat-btn activo" data-cat="todos">Todos</button>
+    <button class="cat-btn" data-cat="ficcion">Ficción</button>
+    <button class="cat-btn" data-cat="romance">Romance</button>
+    <button class="cat-btn" data-cat="ciencia-ficcion">Ciencia Ficción</button>
+    <button class="cat-btn" data-cat="clasicos">Clásicos</button>
+    <button class="cat-btn" data-cat="fantasia">Fantasía</button>
+    <button class="cat-btn" data-cat="misterio">Misterio</button>
 </div>
 
 <!-- Destacados -->
 <div class="titulo-seccion">
-    <h2>Destacados de la semana</h2>
-    <button class="ver-todo">Ver todos</button>
+    <h2>Libros mas leidos de la semana</h2>
 </div>
 
-<div class="fila-libros" data-id="1">
-    <div class="libro">
-        <img src="IMG/CIEN AÑOS.JPG" alt="">
-        <h4>Cien Años de Soledad</h4>
-        <p>Gabriel García Márquez</p>
+<div class="fila-libros" data-id="1" data-cat="fantasia">
+    <div class="libro" data-id="10"data-cat=>
+        <img src="IMG/el señor de los anillos.jpg">
+        <h4>El Señor de los Anillos</h4>
+        <p>J.R.R. Tolkien</p>
     </div>
     <div class="libro" data-id="2">
         <img src="IMG/Principito.jpg" alt="">
@@ -74,65 +64,65 @@
 
 <!-- Populares -->
 <div class="titulo-seccion">
-    <h2>Libros Populares</h2>
+    <h2>Libros que te podrían interesar</h2>
 </div>
 <div class="grid-libros">
-    <div class="libro" data-id="4">
+    <div class="libro" data-id="4" data-cat="clasicos">
         <img src="IMG/don quijote.jpg">
         <h4>Don Quijote de la Mancha</h4>
         <p>Miguel de Cervantes</p>
     </div>
-    <div class="libro" data-id="3">
+    <div class="libro" data-id="3" data-cat="ciencia-ficcion">
         <img src="IMG/1894.jpg">
         <h4>1984</h4>
         <p>George Orwell</p>
     </div>
-    <div class="libro" data-id="2">
+    <div class="libro" data-id="2" data-cat="clasicos">
         <img src="IMG/Principito.jpg">
         <h4>El Principito</h4>
         <p>Antoine de Saint-Exupéry</p>
     </div>
-    <div class="libro" data-id="1">
+    <div class="libro" data-id="1" data-cat="ficcion">
         <img src="IMG/CIEN AÑOS.JPG">
         <h4>Cien Años de Soledad</h4>
         <p>Gabriel García Márquez</p>
     </div>
-    <div class="libro" data-id="5">
+    <div class="libro" data-id="5" data-cat="fantasia">
         <img src="IMG/harry poter.jpg">
         <h4>Harry Potter y la Piedra Filosofal</h4>
         <p>J.K. Rowling</p>
     </div>
-    <div class="libro" data-id="6">
+    <div class="libro" data-id="6" data-cat="romance">
         <img src="IMG/orgullo y perjucio.jpg">
-        <h4>Orgullo y Perjucio</h4>
+        <h4>Orgullo y Prejuicio</h4>
         <p>Jane Austen</p>
     </div>
-    <div class="libro" data-id="7">
+    <div class="libro" data-id="7" data-cat="ficcion">
         <img src="IMG/cronica de la muerte.jpg">
         <h4>Crónica de una Muerte Anunciada</h4>
         <p>Gabriel García Márquez</p>
     </div>
-    <div class="libro" data-id="8">
+    <div class="libro" data-id="8" data-cat="misterio">
         <img src="IMG/codigo vinci.jpg">
         <h4>El Código Da Vinci</h4>
         <p>Dan Brown</p>
     </div>
-    <div class="libro" data-id="9">
+    <div class="libro" data-id="9" data-cat="ciencia-ficcion">
         <img src="IMG/el juego del hambre.jpg">
         <h4>Los Juegos del Hambre</h4>
         <p>Suzanne Collins</p>
     </div>
-    <div class="libro" data-id="10">
+    <div class="libro" data-id="10" data-cat="fantasia">
         <img src="IMG/el señor de los anillos.jpg">
         <h4>El Señor de los Anillos</h4>
         <p>J.R.R. Tolkien</p>
     </div>
-    <div class="libro" data-id="11">
+    <div class="libro" data-id="11" data-cat="clasicos">
         <img src="IMG/crimen y castigo.jpg">
         <h4>Crimen y Castigo</h4>
         <p>Fiódor Dostoyevski</p>
     </div>
-    <div class="libro" data-id="12">
+    <div class="libro" data-id="12" data-cat="ficcion">
         <img src="IMG/casa de los espiritus.jpg">
         <h4>La Casa de los Espíritus</h4>
         <p>Isabel Allende</p>
@@ -147,19 +137,18 @@
     </div>
     <div>
         <h3>Explorar</h3>
-        <a href="#">Nuevos lanzamientos</a>
-        <a href="#">Populares</a>
-        <a href="#">Clásicos</a>
+        <a href="#">Libros mas leidos de la semana</a>
+        <a href="#">Libros que te podrian interesar</a>
     </div>
     <div>
         <h3>Categorías</h3>
         <a href="#">Ficción</a>
-        <a href="#">No ficción</a>
-        <a href="#">Ciencia ficción</a>
+        <a href="#">Romance</a>
+        <a href="#">Misterio</a>
     </div>
 </footer>
 
-<!-- MODAL DETALLADO DE LIBRO -->
+<!-- MODAL DE LIBRO -->
 <div id="modalLibro" class="modal">
     <div class="modal-content-detalle">
 
@@ -207,15 +196,12 @@
             <div id="modalGeneros" class="generos"></div>
 
             <div class="actions">
-                <button class="btn-secondary">❤ Guardar</button>
-                <button class="btn-secondary">↗ Compartir</button>
-                <button class="btn-secondary">⬇ Descargar</button>
             </div>
 
             <div class="actions-large">
-                <button class="btn-dark">Leer ahora</button>
-                <button class="btn-outline">Agregar a mi biblioteca</button>
+                <button id="leerAhora" class="btn-dark">Leer ahora</button>
             </div>
+
 
         </div>
     </div>
@@ -223,5 +209,6 @@
 
 
 <script src="Proyecto.js"></script>
+
 </body>
 </html>

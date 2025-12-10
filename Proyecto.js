@@ -1,10 +1,10 @@
 console.log("App cargada :)");
-
+ 
 // Buscador
 const buscador = document.querySelector(".buscador input");
 const libros = document.querySelectorAll(".libro, .libro-destacado");
-
-// Array con toda la info de los libros
+ 
+// info de los libros
 const librosData = [
     {
         id: 1,
@@ -16,7 +16,8 @@ const librosData = [
         categoria: "Clásicos",
         generos: ["Ficción", "Realismo mágico"],
         descripcion: "La novela narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.",
-        img: "IMG/CIEN AÑOS.JPG"
+        img: "IMG/CIEN AÑOS.JPG",
+        url: "https://www.secst.cl/upfiles/documentos/19072016_1207am_578dc39115fe9.pdf"
     },
     {
         id: 2,
@@ -28,7 +29,8 @@ const librosData = [
         categoria: "Ficción",
         generos: ["Fábula", "Aventura"],
         descripcion: "Un piloto se encuentra con un pequeño príncipe que viaja desde un asteroide a la Tierra, descubriendo lecciones sobre la vida y la amistad.",
-        img: "IMG/Principito.jpg"
+        img: "IMG/Principito.jpg",
+        url: "https://web.seducoahuila.gob.mx/biblioweb/upload/el%20principito.pdf"
     },
     {
         id: 3,
@@ -40,7 +42,8 @@ const librosData = [
         categoria: "Ciencia ficción",
         generos: ["Distopía", "Política"],
         descripcion: "En un mundo totalitario, Winston Smith lucha contra la opresión del Partido y su líder, el Gran Hermano.",
-        img: "IMG/1894.jpg"
+        img: "IMG/1894.jpg",
+        url: "https://www.philosophia.cl/biblioteca/orwell/1984.pdf"
     },
     {
         id: 4,
@@ -52,7 +55,8 @@ const librosData = [
         categoria: "Clásicos",
         generos: ["Aventura", "Ficción"],
         descripcion: "Las aventuras de un caballero loco que cree revivir la caballería y su fiel escudero, Sancho Panza.",
-        img: "IMG/don quijote.jpg"
+        img: "IMG/don quijote.jpg",
+        url: "https://www.suneo.mx/literatura/subidas/Miguel%20de%20Cervantes%20El%20Ingenioso%20Hidalgo%20Don%20Quijote%20de%20la%20Mancha.pdf"
     },
     {
         id: 5,
@@ -64,7 +68,8 @@ const librosData = [
         categoria: "Ficción",
         generos: ["Aventura", "Fantasía"],
         descripcion: "Harry descubre que es un mago y asiste al Colegio Hogwarts de Magia y Hechicería, viviendo increíbles aventuras.",
-        img: "IMG/harry poter.jpg"
+        img: "IMG/harry poter.jpg",
+        url: "https://biblioteca-digital.universidadcolumbia.edu.mx/acervo/LITERATURA/Harry_Potter_y_la_Piedra_Filosofal-J_K_Rowling.pdf%22"
     },
     {
         id: 6,
@@ -76,7 +81,8 @@ const librosData = [
         categoria: "Romance",
         generos: ["Romance", "Sociedad"],
         descripcion: "La historia de Elizabeth Bennet y su relación con el orgulloso Sr. Darcy en la Inglaterra del siglo XIX.",
-        img: "IMG/orgullo y perjucio.jpg"
+        img: "IMG/orgullo y perjucio.jpg",
+        url: "https://web.seducoahuila.gob.mx/biblioweb/upload/orgullo_y_prejuicio.pdf"
     },
     {
         id: 7,
@@ -88,7 +94,8 @@ const librosData = [
         categoria: "Clásicos",
         generos: ["Ficción", "Misterio"],
         descripcion: "La historia de un asesinato anunciado desde el principio y cómo los habitantes del pueblo reaccionan ante ello.",
-        img: "IMG/cronica de la muerte.jpg"
+        img: "IMG/cronica de la muerte.jpg",
+        url: "https://unisinucartagena.edu.co/wp-content/uploads/2020/07/Cronica_de_una_Muerte_Anunciada-Gabriel_Garcia_Marquez.pdf%22"
     },
     {
         id: 8,
@@ -100,7 +107,8 @@ const librosData = [
         categoria: "Ficción",
         generos: ["Misterio", "Thriller"],
         descripcion: "El simbólogo Robert Langdon se ve envuelto en un asesinato y descubre secretos ocultos relacionados con el Santo Grial.",
-        img: "IMG/codigo vinci.jpg"
+        img: "IMG/codigo vinci.jpg",
+        url: "https://mercaba.org/SANLUIS/ALiteratura/Literatura%20contempor%C3%A1nea/Brown,%20Dan/El%20C%C3%B3digo%20Da%20Vinci.pdf%22"
     },
     {
         id: 9,
@@ -112,7 +120,8 @@ const librosData = [
         categoria: "Ciencia ficción",
         generos: ["Distopía", "Aventura"],
         descripcion: "Katniss Everdeen lucha por sobrevivir en un reality show mortal en una sociedad distópica.",
-        img: "IMG/el juego del hambre.jpg"
+        img: "IMG/el juego del hambre.jpg",
+        url: "https://fhs.trusd.net/documents/Library/Ebooks/the%20hunger%20games%20in%20spanish.pdf"
     },
     {
         id: 10,
@@ -124,7 +133,8 @@ const librosData = [
         categoria: "Fantasía",
         generos: ["Fantasía", "Aventura"],
         descripcion: "Frodo Bolsón emprende un viaje épico para destruir el Anillo Único y salvar la Tierra Media.",
-        img: "IMG/el señor de los anillos.jpg"
+        img: "IMG/el señor de los anillos.jpg",
+        url: "https://web.seducoahuila.gob.mx/biblioweb/upload/J.R.R.%20Tolkien%20La%20Comunidad%20del%20anillo%20I.pdf"
     },
     {
         id: 11,
@@ -136,7 +146,8 @@ const librosData = [
         categoria: "Clásicos",
         generos: ["Filosofía", "Psicológico"],
         descripcion: "Raskólnikov comete un asesinato y debe enfrentarse a la culpa, el castigo y la redención en San Petersburgo.",
-        img: "IMG/crimen y castigo.jpg"
+        img: "IMG/crimen y castigo.jpg",
+        url: "https://roscuba.ru/images/pdf/crimen_y_castigo_fiodor_dostoievski_es.pdf"
     },
     {
         id: 12,
@@ -148,19 +159,20 @@ const librosData = [
         categoria: "Ficción",
         generos: ["Realismo mágico", "Familia"],
         descripcion: "La saga de la familia Trueba a través de varias generaciones, mezclando lo real y lo sobrenatural.",
-        img: "IMG/casa de los espiritus.jpg"
+        img: "IMG/casa de los espiritus.jpg",
+        url: "https://www.suneo.mx/literatura/subidas/Isabel%20Allende%20La%20Casa%20de%20los%20Esp%C3%ADritus.pdf"
     }
 ];
-
+ 
 // BUSCADOR
 if (buscador) {
     buscador.addEventListener("input", (e) => {
         const texto = e.target.value.toLowerCase().trim();
-
+ 
         libros.forEach(libro => {
             const titulo = libro.querySelector("h4").textContent.toLowerCase();
             const autor = libro.querySelector("p").textContent.toLowerCase();
-
+ 
             if (titulo.includes(texto) || autor.includes(texto)) {
                 libro.style.display = "block";
             } else {
@@ -169,13 +181,41 @@ if (buscador) {
         });
     });
 }
-
-// MODAL
+ 
+// CERRAR MODAL
+document.getElementById("cerrarModal").onclick = () => {
+    document.getElementById("modalLibro").style.display = "none";
+    const visorLibro = document.getElementById("visorLibro");
+    if (visorLibro) visorLibro.innerHTML = "";
+};
+ 
+window.onclick = e => {
+    const modal = document.getElementById("modalLibro");
+    if (e.target === modal) {
+        modal.style.display = "none";
+        const visorLibro = document.getElementById("visorLibro");
+        if (visorLibro) visorLibro.innerHTML = "";
+    }
+};
+ 
+// MENÚ HAMBURGUESA
+const hamburger = document.getElementById("hamburger");
+const menuMobile = document.getElementById("menuMobile");
+if (hamburger && menuMobile) {
+    hamburger.addEventListener("click", () => {
+        menuMobile.classList.toggle("show");
+    });
+}
+ 
+// MODAL  LEER AHORA
+const btnLeerAhora = document.getElementById("leerAhora");
+const visorLibro = document.getElementById("visorLibro");
+ 
 libros.forEach(libro => {
     libro.addEventListener("click", () => {
         const id = parseInt(libro.dataset.id);
         const info = librosData.find(l => l.id === id);
-
+ 
         if(info){
             document.getElementById("modalImagen").src = info.img;
             document.getElementById("modalTitulo").textContent = info.titulo;
@@ -186,7 +226,7 @@ libros.forEach(libro => {
             document.getElementById("modalCategoria").textContent = info.categoria;
             document.getElementById("modalCategoria2").textContent = info.categoria;
             document.getElementById("modalDescripcion").textContent = info.descripcion;
-
+ 
             const contGeneros = document.getElementById("modalGeneros");
             contGeneros.innerHTML = "";
             info.generos.forEach(g => {
@@ -194,26 +234,44 @@ libros.forEach(libro => {
                 span.textContent = g;
                 contGeneros.appendChild(span);
             });
-
+ 
+            // Abrir URL al dar clic en "Leer ahora"
+            if (btnLeerAhora) {
+                btnLeerAhora.onclick = () => {
+                    if (info.url) {
+                        window.open(info.url, "_blank");
+                    } else {
+                        alert("Este libro no tiene enlace disponible.");
+                    }
+                }
+            }
+ 
             document.getElementById("modalLibro").style.display = "flex";
         }
     });
 });
-
-// CERRAR MODAL
-document.getElementById("cerrarModal").onclick = () => {
-    document.getElementById("modalLibro").style.display = "none";
-};
-
-window.onclick = e => {
-    const modal = document.getElementById("modalLibro");
-    if (e.target === modal) modal.style.display = "none";
-};
-
-// MENÚ HAMBURGUESA
-const hamburger = document.getElementById("hamburger");
-const menuMobile = document.getElementById("menuMobile");
-
-hamburger.addEventListener("click", () => {
-    menuMobile.classList.toggle("show");
+document.addEventListener('DOMContentLoaded', () => {
+    const botones = document.querySelectorAll('.categorias .cat-btn');
+    const libros = document.querySelectorAll('.grid-libros .libro');
+ 
+    botones.forEach(boton => {
+        boton.addEventListener('click', () => {
+            botones.forEach(b => b.classList.remove('activo'));
+            boton.classList.add('activo');
+ 
+            const categoria = boton.getAttribute('data-cat');
+ 
+            libros.forEach(libro => {
+                if(categoria === 'todos') {
+                    libro.style.display = 'block';
+                } else {
+                    if(libro.getAttribute('data-cat') === categoria) {
+                        libro.style.display = 'block';
+                    } else {
+                        libro.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
 });
